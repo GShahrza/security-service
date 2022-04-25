@@ -15,9 +15,9 @@ import static javax.persistence.FetchType.EAGER;
 @Entity
 @Setter
 @Getter
-@Table(name = "account")
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "account")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Account {
 
@@ -39,11 +39,11 @@ public class Account {
     private Boolean isActive = true;
 
     @CreationTimestamp
-    @Column(name = "created_at", columnDefinition = "timestamp default now()", nullable = false)
+    @Column(name = "created_at",columnDefinition = "timestamp default now()", nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
     @UpdateTimestamp
-    @Column(name = "updated_at", columnDefinition = "timestamp default now()", nullable = false)
+    @Column(name = "updated_at",columnDefinition = "timestamp default now()", nullable = false)
     private LocalDateTime updatedAt = LocalDateTime.now();
 
     @ManyToMany(fetch = EAGER)

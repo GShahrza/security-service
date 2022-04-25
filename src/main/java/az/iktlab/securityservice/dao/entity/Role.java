@@ -11,10 +11,9 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
-@Builder
-@Table(name = "role")
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "role")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Role {
 

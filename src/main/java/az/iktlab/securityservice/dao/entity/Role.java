@@ -23,7 +23,7 @@ public class Role {
     Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "role_name")
+    @Column(name = "role_name",unique = true)
     ERole roleName;
 
     @CreationTimestamp
@@ -33,4 +33,9 @@ public class Role {
     @UpdateTimestamp
     @Column(name = "updated_at",columnDefinition = "timestamp default now()", nullable = false)
     private LocalDateTime updatedAt = LocalDateTime.now();
+
+    public Role(Long id, ERole role) {
+        this.id = id;
+        this.roleName = role;
+    }
 }

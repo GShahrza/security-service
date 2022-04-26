@@ -13,4 +13,5 @@ public class AccountRequestDTO {
     String username;
     String email;
     String password;
+
 }
